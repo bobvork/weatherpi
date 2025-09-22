@@ -12,3 +12,18 @@ Other projects for inspiration and reference:
 Icon font:
 https://erikflowers.github.io/weather-icons/
 
+## Running
+
+To run the script on reboot and every hour, put something like this in
+the crontab
+
+```sh
+
+# Run every hour with reboot protection
+0 * * * * /usr/local/bin/script-wrapper.sh
+
+# Run on reboot with delay
+@reboot sleep 300 && /usr/local/bin/script-wrapper.sh
+```
+
+
