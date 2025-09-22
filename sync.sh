@@ -12,7 +12,7 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 echo -e "${BLUE}Syncing code to Pi...${NC}"
-rsync -avz --exclude='.git' --exclude='node_modules' --exclude='__pycache__' \
+rsync -avz --exclude='.git' --exclude='node_modules' --exclude='__pycache__' --exclude='.venv' \
   $LOCAL_PROJECT_DIR $PI_USER@$PI_HOST:$PI_PROJECT_DIR/
 
 if [ $? -eq 0 ]; then
