@@ -3,6 +3,13 @@
 import sys
 import os
 
+"""
+
+This is the demo code from Waveshare.
+It's not used in this progress but kept as reference
+
+"""
+
 picdir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "pic")
 libdir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "lib")
 if os.path.exists(libdir):

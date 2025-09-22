@@ -3,8 +3,8 @@
 
 PI_USER="bobvork"
 PI_HOST="rpizero"
-PI_PROJECT_DIR="/home/bobvork/einktest"
-LOCAL_PROJECT_DIR="./"
+PI_PROJECT_DIR="/home/bobvork/weather"
+LOCAL_PROJECT_DIR="./src"
 
 # Colors for output
 GREEN='\033[0;32m'
