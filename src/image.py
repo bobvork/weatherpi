@@ -50,7 +50,7 @@ def create_image(width, height, assets_dir):
     DrawImage = Image.new("1", (height, width), 255)
     draw = ImageDraw.Draw(DrawImage)
 
-    weather = get_weather()
+    weather = get_weather(True)
     draw.text(
         (height - 4, 4),
         f"{weather.update_date}",
@@ -59,8 +59,8 @@ def create_image(width, height, assets_dir):
         align="right",
         anchor="rt",
     )
-    draw.text((20, 10), icon_for_weather(weather.icon), font=icon_font, fill=0)
-    draw.text((80, 20), f"{weather.current_temp} °", font=font_lg, fill=0)
+    draw.text((15, 10), icon_for_weather(weather.icon), font=icon_font, fill=0)
+    draw.text((80, 20), f"{weather.current_temp}°C", font=font_lg, fill=0)
 
     draw.text((20, 70), f"Regen: {weather.rain_percent}%", font=font_sm, fill=0)
 
@@ -86,7 +86,6 @@ def create_image(width, height, assets_dir):
         fill=0,
         align="right",
     )
-    # draw.text((170, 50), f"L: {weather.min_temp} °C", font=font_md, fill=0)
 
     draw_line(draw, 0.05, 0.66, 0.95, 0.66, width, height)
 
